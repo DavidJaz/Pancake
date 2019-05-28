@@ -1,4 +1,8 @@
-pop "dip {a} b = b a"
+pop "dip {a} b = b a";
+pop "dup a = a a";
+pop "quote a = {a}";
+pop "do {a} = a";
+pop "pop a = ";
 
 pop "quote2 a b = {a b}";
 let 'quote2 { . swap quote dip {quote} };
