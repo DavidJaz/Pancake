@@ -1,0 +1,7 @@
+Configuring flow-1.0.17...
+Preprocessing library for flow-1.0.17..
+Building library for flow-1.0.17..
+[1 of 2] Compiling Flow             ( library/Flow.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Flow.o )
+[2 of 2] Compiling Paths_flow       ( .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/autogen/Paths_flow.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Paths_flow.o )
+Installing library in /home/david/.stack/snapshots/x86_64-linux/lts-12.16/8.4.4/lib/x86_64-linux-ghc-8.4.4/flow-1.0.17-4mJDzp8vyFj7fZxJViZ2uf
+Registering library for flow-1.0.17..

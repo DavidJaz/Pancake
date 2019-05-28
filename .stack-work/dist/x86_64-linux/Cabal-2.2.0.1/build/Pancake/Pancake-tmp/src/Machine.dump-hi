@@ -1,0 +1,315 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-28 22:58:55.059292296 UTC
+
+interface main:Machine 8044
+  interface hash: 813acb56119f17e83abe7be2d8029774
+  ABI hash: cffc492913b7994788462314cca900f6
+  export-list hash: bcca608d31376c090b0bd63e1686e295
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8ab3b79eed98a2615a301b580ce40afe
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Machine.begin
+  Machine.load
+  Machine.machine
+  Machine.pretty_print
+  Machine.repl
+  Machine.run
+  Machine.run_all
+  Machine.MachineState
+module dependencies: Cmds Parse
+package dependencies: array-0.5.2.0 base-4.11.1.0* binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.11.0 deepseq-1.4.3.0 flow-1.0.17
+                      ghc-prim-0.5.2.0 integer-gmp-1.0.2.0 mtl-2.2.2 parsec-3.1.13.0
+                      split-0.2.3.3 text-1.2.3.1 transformers-0.5.5.0
+orphans: text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal containers-0.5.11.0:Data.Tree
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+import  -/  base-4.11.1.0:Control.Applicative 55d9b3a7491623b0362290e162d67308
+import  -/  base-4.11.1.0:Data.Either 39d922b371c4c52d426e9ee66de8371a
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  base-4.11.1.0:System.IO 40b9aff18a55c99eb253f9a43ff9b627
+import  -/  containers-0.5.11.0:Data.Map.Internal e02d23495520de11b8e9f3c9c93a4d11
+import  -/  containers-0.5.11.0:Data.Map.Strict 40ac55e8c7db7b7f0f7e3d9769233909
+import  -/  containers-0.5.11.0:Data.Map.Strict.Internal 56d73c08e046f8e159a99dc3860f1033
+import  -/  flow-1.0.17:Flow 546da13236743b06bf458975b0203733
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+import  -/  Cmds 1cc04dcf68dd5d762764160befcade26
+  exports: ef12c9bfc25efc5693e7933736b47067
+  CAdd 60f975d27cbcf86aa02f004307424649
+  CComp 03fe1a4a50fd071195e219b883444d50
+  CDip 427f9a012c7e67a1b46db862f809810a
+  CDiv b61954da2cf0a9e758937ae3cf8d0957
+  CDo cdbe8a19d688e2fdf941e650421a7378
+  CDup 7afd10cc40c09ff5ca7095a1637c27af
+  CEq a71fd5ca156d6b2df6f5473c051dc4eb
+  CExp f973e2b520ad92e5fb66031e13d42d6c
+  CHead 73416f7f8fc5adc8c1ee6b3ab37127fc
+  CLet 2750c40c78dae74ebdd9939b1befd9c5
+  CMatch 93b64287e80bad3b50c3962c395b2d4f
+  CMul 2435775ffddf5087850c0492635d70a8
+  CPop 54346427038e549d7d72f4a7e89a4719
+  CQuote 645655b00182246d430b212932c135ec
+  CSub 12fd770c7595d28b5e248a451f97b585
+  Call 358e540eeb659dcea76c4fdb6118d59c
+  Cmd 869d518976c6b2e44d27a74760fb336b
+  Cmds 869d518976c6b2e44d27a74760fb336b
+  Environment 9e70f03e35361c135a5311da6c9eeade
+  Error 4809e7881c31f42db71a1acadb91a4f0
+  LitInt 215c2bdfd34e2fbc63764869f1ae7a86
+  Push 819b7a9acf131f6168aff199fad3af24
+  Quote ca81ce192352cb1544fc09662c455568
+  Rule 80f86e9fdd53997b056ed6379d8d12ae
+  VName 3d9bf4179275a4cd1b68d424bf7e46a2
+  Values fa25f3b1e1d6c4f212207f11f758903c
+  print_stack 400d46109864899f323becc6cce073bc
+import  -/  Parse 5377fe33f37de7680be26b833c2ebd09
+  exports: edde00a15f81cc93c1480082177cc23b
+  readLine 9b582ba8629ca571802e0db777cb2e5e
+import  -/  parsec-3.1.13.0:Text.Parsec e90badd3142bbbc76a819d68ecc5d5f5
+e19643504e464e0d8eb4b981f6bf1ecc
+  $sinsert_$sgo8 ::
+    Cmds.Name
+    -> a1
+    -> Data.Map.Internal.Map Cmds.Name a1
+    -> Data.Map.Internal.Map Cmds.Name a1
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+1c4ea3054afaf9505142c92260681135
+  $slookup1 ::
+    Cmds.Name -> Data.Map.Internal.Map Cmds.Name a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+83e6bba2a873a6015215ca054d7b684a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Machine.$trModule3
+                   Machine.$trModule1) -}
+dc623576c7b5bc5ce64b218a44714b96
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Machine.$trModule2) -}
+06dd06306645a0218c5e09dada600033
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Machine"#) -}
+152e97b5bf530f43b8c510dcf3b5f36c
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Machine.$trModule4) -}
+dc108991fb633b010a964db7f72573fb
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+38f15f36d9ecb543bdc5958275efa334
+  $wgo ::
+    [Cmds.Cmd]
+    -> Cmds.Environment -> Cmds.Values -> Machine.MachineState
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>m, Inline: [0] -}
+ed04fb596b765202f0ca993971daf7ca
+  $wrun ::
+    Cmds.Cmd
+    -> Cmds.Environment
+    -> Cmds.Values
+    -> (# Cmds.Environment, Cmds.Values #)
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [0] -}
+76b53098fbbfb77558971761f5bf8e04
+  type MachineState = (Cmds.Environment, Cmds.Values)
+060451dfeadc7a8fadd70825a54acb49
+  begin :: Machine.MachineState
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Data.Map.Internal.Tip @ Cmds.Name @ Cmds.Cmds,
+                  GHC.Types.[] @ Cmds.Value)) -}
+c1293c2c785318a6966036ea57b36bb6
+  load :: Cmds.Error Cmds.Cmds -> Cmds.Error Machine.MachineState
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds1 :: Data.Either.Either
+                             Text.Parsec.Error.ParseError Cmds.Cmds) ->
+                 case ds1 of wild {
+                   Data.Either.Left x
+                   -> Data.Either.Left
+                        @ Text.Parsec.Error.ParseError
+                        @ Machine.MachineState
+                        x
+                   Data.Either.Right y
+                   -> Data.Either.Right
+                        @ Text.Parsec.Error.ParseError
+                        @ Machine.MachineState
+                        (Machine.$wgo
+                           y
+                           (Data.Map.Internal.Tip @ Cmds.Name @ Cmds.Cmds)
+                           (GHC.Types.[] @ Cmds.Value)) }) -}
+fd77d8022114b7c65f357cb78d0b0d3e
+  machine ::
+    Cmds.Error Machine.MachineState
+    -> [Cmds.Error Cmds.Cmds] -> [Cmds.Error Machine.MachineState]
+  {- Arity: 2, Strictness: <L,U><L,1*U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (w1 :: Data.Either.Either
+                            Text.Parsec.Error.ParseError Machine.MachineState)
+                   (w2 :: [Data.Either.Either
+                             Text.Parsec.Error.ParseError Cmds.Cmds]) ->
+                 case GHC.List.$wscanlGo
+                        @ (Data.Either.Either
+                             Text.Parsec.Error.ParseError Machine.MachineState)
+                        @ (Data.Either.Either Text.Parsec.Error.ParseError Cmds.Cmds)
+                        @ (Data.Either.Either
+                             Text.Parsec.Error.ParseError Machine.MachineState)
+                        @ (Data.Either.Either Text.Parsec.Error.ParseError Cmds.Cmds)
+                        Machine.machine1
+                        w1
+                        w2 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.:
+                   @ (Data.Either.Either
+                        Text.Parsec.Error.ParseError Machine.MachineState)
+                   ww1
+                   ww2 }) -}
+fc17bf7ff894e4a080127e8af62d12fa
+  machine1 ::
+    Data.Either.Either
+      Text.Parsec.Error.ParseError Machine.MachineState
+    -> Data.Either.Either Text.Parsec.Error.ParseError Cmds.Cmds
+    -> Data.Either.Either
+         Text.Parsec.Error.ParseError Machine.MachineState
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (x :: Data.Either.Either
+                           Text.Parsec.Error.ParseError Machine.MachineState)
+                   (ds1 :: Data.Either.Either
+                             Text.Parsec.Error.ParseError Cmds.Cmds) ->
+                 case x of wild {
+                   Data.Either.Left x1 -> wild
+                   Data.Either.Right y
+                   -> case ds1 of wild1 {
+                        Data.Either.Left x1
+                        -> Data.Either.Left
+                             @ Text.Parsec.Error.ParseError
+                             @ Machine.MachineState
+                             x1
+                        Data.Either.Right y1
+                        -> Data.Either.Right
+                             @ Text.Parsec.Error.ParseError
+                             @ Machine.MachineState
+                             (case y of ww { (,) ww1 ww2 -> Machine.$wgo y1 ww1 ww2 }) } }) -}
+3d814c21edb7ff15a3ec1f52427352a0
+  pretty_print :: Cmds.Error Machine.MachineState -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Either.Either
+                            Text.Parsec.Error.ParseError Machine.MachineState) ->
+                 case ds of wild {
+                   Data.Either.Left e -> Text.Parsec.Error.$fShowParseError_$cshow e
+                   Data.Either.Right ds1
+                   -> case ds1 of wild1 { (,) e stack ->
+                      Cmds.print_stack @ Cmds.Value Cmds.$fShowValue stack } }) -}
+18fecbc7957f23e8a8a6b09569d6e6e2
+  repl :: Cmds.Error Cmds.Cmds -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Machine.repl1
+                  `cast`
+                (<Cmds.Error Cmds.Cmds>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+1c3b7b5d75d7cdf3d9f92214703a8365
+  repl1 ::
+    Cmds.Error Cmds.Cmds
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ (imports :: Cmds.Error Cmds.Cmds)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        GHC.IO.Handle.FD.stdin
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (let {
+                      a1 :: Data.Either.Either
+                              Text.Parsec.Error.ParseError Machine.MachineState
+                      = case imports of wild {
+                          Data.Either.Left x
+                          -> Data.Either.Left
+                               @ Text.Parsec.Error.ParseError
+                               @ Machine.MachineState
+                               x
+                          Data.Either.Right y
+                          -> Data.Either.Right
+                               @ Text.Parsec.Error.ParseError
+                               @ Machine.MachineState
+                               (Machine.$wgo
+                                  y
+                                  (Data.Map.Internal.Tip @ Cmds.Name @ Cmds.Cmds)
+                                  (GHC.Types.[] @ Cmds.Value)) }
+                    } in
+                    Data.OldList.unlines
+                      (GHC.Types.:
+                         @ [GHC.Types.Char]
+                         (Machine.pretty_print a1)
+                         (Machine.repl_go (Data.OldList.lines ipv1) a1)))
+                   GHC.Types.False
+                   ipv }) -}
+c85e918a0699d1882295fd531d15c750
+  repl_go ::
+    [[GHC.Types.Char]]
+    -> Data.Either.Either
+         Text.Parsec.Error.ParseError Machine.MachineState
+    -> [[GHC.Types.Char]]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+585e9ac3b2fbe4b018c2210a2918b30c
+  run :: Cmds.Cmd -> Machine.MachineState -> Machine.MachineState
+  {- Arity: 2, Strictness: <S,1*U><S,1*U(U,U)>m, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cmds.Cmd) (w1 :: Machine.MachineState) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case Machine.$wrun w ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                 (ww4, ww5) } }) -}
+518ff194bed4476e6587885a3a1c641f
+  run_all ::
+    Machine.MachineState -> Cmds.Cmds -> Machine.MachineState
+  {- Arity: 2,
+     Unfolding: (GHC.List.foldl
+                   @ Cmds.Cmd
+                   @ Machine.MachineState
+                   Machine.run_all1) -}
+a32b1bfc40679b023184dc25d771702d
+  run_all1 ::
+    Machine.MachineState -> Cmds.Cmd -> Machine.MachineState
+  {- Arity: 2, Strictness: <S,1*U(U,U)><S,1*U>m,
+     Unfolding: InlineRule (2, True, True)
+                (\ (x :: Machine.MachineState) (y :: Cmds.Cmd) ->
+                 Machine.run y x) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

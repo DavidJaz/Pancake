@@ -1,0 +1,1241 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-28 22:58:54.501314439 UTC
+
+interface main:Cmds 8044
+  interface hash: 97249e898b662a12a75d05ab93a81089
+  ABI hash: 1cc04dcf68dd5d762764160befcade26
+  export-list hash: ef12c9bfc25efc5693e7933736b47067
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8ab3b79eed98a2615a301b580ce40afe
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cmds.empty_env
+  Cmds.print_cmds
+  Cmds.print_stack
+  Cmds.to_string
+  Cmds.Cmd{Cmds.CAdd Cmds.CComp Cmds.CDip Cmds.CDiv Cmds.CDo Cmds.CDup Cmds.CEq Cmds.CExp Cmds.CHead Cmds.CImport Cmds.CLet Cmds.CMap Cmds.CMatch Cmds.CMul Cmds.CPop Cmds.CQuote Cmds.CSub Cmds.Call Cmds.Push Cmds.Rule}
+  Cmds.Cmds
+  Cmds.Environment
+  Cmds.Error
+  Cmds.Identifier
+  Cmds.Name
+  Cmds.Stack
+  Cmds.Value{Cmds.LitInt Cmds.LitString Cmds.Quote Cmds.TInt Cmds.TString Cmds.VName Cmds.VType}
+  Cmds.Values
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.11.1.0* binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.11.0 deepseq-1.4.3.0 flow-1.0.17
+                      ghc-prim-0.5.2.0 integer-gmp-1.0.2.0 mtl-2.2.2 parsec-3.1.13.0
+                      text-1.2.3.1 transformers-0.5.5.0
+orphans: text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal containers-0.5.11.0:Data.Tree
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+import  -/  base-4.11.1.0:Data.Either 39d922b371c4c52d426e9ee66de8371a
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:Data.String 1b97cff5f9627e73898d75997a9ccf7f
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  containers-0.5.11.0:Data.Map.Internal e02d23495520de11b8e9f3c9c93a4d11
+import  -/  containers-0.5.11.0:Data.Map.Strict 40ac55e8c7db7b7f0f7e3d9769233909
+import  -/  flow-1.0.17:Flow 546da13236743b06bf458975b0203733
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  parsec-3.1.13.0:Text.Parsec e90badd3142bbbc76a819d68ecc5d5f5
+import  -/  parsec-3.1.13.0:Text.Parsec.Error 5c35aa426bd1cd52bcab90d9a1e3ce4c
+869d518976c6b2e44d27a74760fb336b
+  $fEqCmd :: GHC.Classes.Eq Cmds.Cmd
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Cmds.Cmd Cmds.$fEqCmd_$c== Cmds.$fEqCmd_$c/= -}
+869d518976c6b2e44d27a74760fb336b
+  $fEqCmd_$c/= :: Cmds.Cmd -> Cmds.Cmd -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Cmds.Cmd) (y :: Cmds.Cmd) ->
+                 case Cmds.$fEqCmd_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+869d518976c6b2e44d27a74760fb336b
+  $fEqCmd_$c== :: Cmds.Cmd -> Cmds.Cmd -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>,
+     Unfolding: (\ (ds :: Cmds.Cmd) (ds1 :: Cmds.Cmd) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> case GHC.Prim.dataToTag# @ Cmds.Cmd wild of a# { DEFAULT ->
+                      case GHC.Prim.dataToTag# @ Cmds.Cmd ds1 of b# { DEFAULT ->
+                      GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# a# b#) } }
+                   Cmds.Push a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cmds.Push b1 -> Cmds.$fEqValue_$c== a1 b1 }
+                   Cmds.Call a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cmds.Call b1 -> GHC.Base.eqString a1 b1 }
+                   Cmds.Rule a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cmds.Rule b1 b2
+                        -> case GHC.Classes.$fEq[]_$c==
+                                  @ Cmds.Value
+                                  Cmds.$fEqValue
+                                  a1
+                                  b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> GHC.Classes.$fEq[]_$c==
+                                  @ Cmds.Value
+                                  Cmds.$fEqValue
+                                  a2
+                                  b2 } } }) -}
+869d518976c6b2e44d27a74760fb336b
+  $fEqValue :: GHC.Classes.Eq Cmds.Value
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cmds.Value Cmds.$fEqValue_$c== Cmds.$fEqValue_$c/= -}
+869d518976c6b2e44d27a74760fb336b
+  $fEqValue_$c/= :: Cmds.Value -> Cmds.Value -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Cmds.Value) (y :: Cmds.Value) ->
+                 case Cmds.$fEqValue_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+869d518976c6b2e44d27a74760fb336b
+  $fEqValue_$c== :: Cmds.Value -> Cmds.Value -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd :: GHC.Show.Show Cmds.Cmd
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cmds.Cmd
+                  Cmds.$fShowCmd_$cshowsPrec
+                  Cmds.$fShowCmd_$cshow
+                  Cmds.$fShowCmd_$cshowList -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd1 :: Cmds.Cmd -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Cmds.$fShowCmd_$cshowsPrec Cmds.$fShowCmd2) -}
+7a21774da06c67285bf61f9408113c0b
+  $fShowCmd10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CMatch"#) -}
+0a96be37ec1e09c2906e53db0fba83ba
+  $fShowCmd11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd12) -}
+4f8916f1c4146797427ce4a35c53066e
+  $fShowCmd12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CImport"#) -}
+ef860668a58d169a3b4ec74e94fbfb1a
+  $fShowCmd13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd14) -}
+0624e418e08d5ea190bbfa686c56f1dc
+  $fShowCmd14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CComp"#) -}
+9d9848a6057b1786e126d48302dd7172
+  $fShowCmd15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd16) -}
+482022a3e41296353463ab3cf6a2e4ae
+  $fShowCmd16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CQuote"#) -}
+e8ff30ad94e22b2d0525b5de827d7647
+  $fShowCmd17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd18) -}
+c92f6974bdf0eb1bf26ff8b46d77ac26
+  $fShowCmd18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CPop"#) -}
+4ced1bed249463a87b08994507571265
+  $fShowCmd19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd20) -}
+b03034610b5afcaa3bee342e78243c16
+  $fShowCmd2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+424e6c305a4124ac17ded5f3faed5266
+  $fShowCmd20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CDip"#) -}
+7d2ab129e3b742a11fd63bf42a91dc81
+  $fShowCmd21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd22) -}
+a56812819d12b7ed00bb6deb221a6af4
+  $fShowCmd22 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CDup"#) -}
+d0b055c6f74d21724f4954e86cc8a68f
+  $fShowCmd23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   GHC.Show.showList__4
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+bfae26937a761129f0a5957df70061c1
+  $fShowCmd24 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Rule "#) -}
+a0a52b684329802288b2bafa047dcdd6
+  $fShowCmd25 :: [GHC.Types.Char]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+4beea71c1ea08efb96efe1e8957f3a9d
+  $fShowCmd26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Call "#) -}
+e276cdfbcb84cb12adb8a08ab02e67ea
+  $fShowCmd27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd28) -}
+3ca345e9087a82f15de0ea50f08f326c
+  $fShowCmd28 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CLet"#) -}
+4fe87fd4d59591e07f229ebb492b508e
+  $fShowCmd29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd30) -}
+c38a8123150d2ff0b9482da8105e403b
+  $fShowCmd3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd4) -}
+206e0d9f6817f9c07ae233d84adf12e0
+  $fShowCmd30 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CDo"#) -}
+de949b1408b433ea844b38d35423d09e
+  $fShowCmd31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd32) -}
+3a732486a1bfea13c07e0e0d0f770a0e
+  $fShowCmd32 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CExp"#) -}
+f4a832ae6607dab71b352272155c4a9e
+  $fShowCmd33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd34) -}
+97cf58975b7ced27b45bb21debaf2e3f
+  $fShowCmd34 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CDiv"#) -}
+cf7dd5b03046b6947ae70b5c59ee8825
+  $fShowCmd35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd36) -}
+e1fb367fe3d20eff3651b5a28c91199e
+  $fShowCmd36 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CMul"#) -}
+d8269584f2b394df95fe08ec3e43dc8e
+  $fShowCmd37 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd38) -}
+a9d6d0ed1c9e6a4cc3dee8cde378a4f8
+  $fShowCmd38 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CSub"#) -}
+cac98a6dde00f2f67fbff4968386163d
+  $fShowCmd39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd40) -}
+a1a15974601c8d52b7368cfb0291192b
+  $fShowCmd4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CMap"#) -}
+cb8e577b61c15d4f00d485a79b9b4fdd
+  $fShowCmd40 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CAdd"#) -}
+6913ef8f02918a2dcdf1d34a4c29682f
+  $fShowCmd41 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd42) -}
+f0614ae105f35381b89bde2dee912101
+  $fShowCmd42 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("String"#) -}
+8c6115972bad48b66d44be4b710a4e43
+  $fShowCmd43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd44) -}
+a5f2d809ffe96f9c5ef07f7ba11e3aff
+  $fShowCmd44 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Int"#) -}
+949fc575af830a1907e0a302d76132bd
+  $fShowCmd45 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd46) -}
+ca731d84c5c24aeb208bbdf68ca95e49
+  $fShowCmd46 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Type"#) -}
+2c72c4801a49c80a8c2977f4d4b955c9
+  $fShowCmd47 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd48) -}
+97aa70e4c9fc01286c02c8f17c13a9f1
+  $fShowCmd48 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\""#) -}
+520e92c8c4ff28c5133f784e24ddce31
+  $fShowCmd49 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Push "#) -}
+5239e3d3bae9bb7823fae134e0ae186b
+  $fShowCmd5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd6) -}
+c6aa6b90fd3067ca32876f6d3e685383
+  $fShowCmd6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CEq"#) -}
+190adfdb629280579415dcaa1c0cc97e
+  $fShowCmd7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd8) -}
+e8d80ad3d5011e8222a8e573940c2112
+  $fShowCmd8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CHead"#) -}
+f470c2d53deba4ede428bf58d35a8fea
+  $fShowCmd9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.$fShowCmd10) -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd_$cshow :: Cmds.Cmd -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Cmds.Cmd) ->
+                 case x of wild {
+                   Cmds.Push b1
+                   -> GHC.CString.unpackAppendCString#
+                        Cmds.$fShowCmd49
+                        (Cmds.$fShowCmd_$cshow1 b1)
+                   Cmds.CAdd -> Cmds.$fShowCmd39
+                   Cmds.CSub -> Cmds.$fShowCmd37
+                   Cmds.CMul -> Cmds.$fShowCmd35
+                   Cmds.CDiv -> Cmds.$fShowCmd33
+                   Cmds.CExp -> Cmds.$fShowCmd31
+                   Cmds.CDo -> Cmds.$fShowCmd29
+                   Cmds.CLet -> Cmds.$fShowCmd27
+                   Cmds.Call b1
+                   -> GHC.CString.unpackAppendCString#
+                        Cmds.$fShowCmd26
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.$fShow(,)3
+                           (GHC.Show.showLitString b1 Cmds.$fShowCmd25))
+                   Cmds.Rule b1 b2
+                   -> GHC.CString.unpackAppendCString#
+                        Cmds.$fShowCmd24
+                        (let {
+                           s :: GHC.Base.String
+                           = case b2 of wild1 {
+                               [] -> Cmds.$fShowCmd23
+                               : x1 xs
+                               -> GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.showList__3
+                                    (GHC.Base.++
+                                       @ GHC.Types.Char
+                                       (Cmds.$fShowCmd_$cshow1 x1)
+                                       (Cmds.$fShowCmd_showl xs)) }
+                         } in
+                         let {
+                           s1 :: GHC.Base.String
+                           = GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 s
+                         } in
+                         case b1 of wild1 {
+                           [] -> GHC.CString.unpackAppendCString# GHC.Show.showList__4 s1
+                           : x1 xs
+                           -> GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.showList__3
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   (Cmds.$fShowCmd_$cshow1 x1)
+                                   (let {
+                                      lvl1 :: [GHC.Types.Char]
+                                      = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 s1
+                                    } in
+                                    letrec {
+                                      showl :: [Cmds.Value] -> GHC.Base.String
+                                        {- Arity: 1, Strictness: <S,1*U> -}
+                                      = \ (ds2 :: [Cmds.Value]) ->
+                                        case ds2 of wild2 {
+                                          [] -> lvl1
+                                          : y ys
+                                          -> GHC.Types.:
+                                               @ GHC.Types.Char
+                                               GHC.Show.showList__1
+                                               (GHC.Base.++
+                                                  @ GHC.Types.Char
+                                                  (Cmds.$fShowCmd_$cshow1 y)
+                                                  (showl ys)) }
+                                    } in
+                                    showl xs)) })
+                   Cmds.CDup -> Cmds.$fShowCmd21
+                   Cmds.CDip -> Cmds.$fShowCmd19
+                   Cmds.CPop -> Cmds.$fShowCmd17
+                   Cmds.CQuote -> Cmds.$fShowCmd15
+                   Cmds.CComp -> Cmds.$fShowCmd13
+                   Cmds.CImport -> Cmds.$fShowCmd11
+                   Cmds.CMatch -> Cmds.$fShowCmd9
+                   Cmds.CHead -> Cmds.$fShowCmd7
+                   Cmds.CEq -> Cmds.$fShowCmd5
+                   Cmds.CMap -> Cmds.$fShowCmd3 }) -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd_$cshow1 :: Cmds.Value -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Cmds.Value) ->
+                 case ds of wild {
+                   Cmds.LitInt n -> GHC.Show.$fShowInt_$cshow n
+                   Cmds.LitString s
+                   -> GHC.CString.unpackAppendCString#
+                        Cmds.$fShowCmd48
+                        (GHC.Base.++ @ GHC.Types.Char s Cmds.$fShowCmd47)
+                   Cmds.Quote stack -> Cmds.print_cmds stack
+                   Cmds.VName n -> n
+                   Cmds.VType -> Cmds.$fShowCmd45
+                   Cmds.TInt -> Cmds.$fShowCmd43
+                   Cmds.TString -> Cmds.$fShowCmd41 }) -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd_$cshowList :: [Cmds.Cmd] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Cmds.Cmd]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Cmds.Cmd Cmds.$fShowCmd1 ls s) -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd_$cshowsPrec ::
+    GHC.Types.Int -> Cmds.Cmd -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowCmd_showl :: [Cmds.Value] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2 -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowValue :: GHC.Show.Show Cmds.Value
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cmds.Value
+                  Cmds.$fShowValue_$cshowsPrec
+                  Cmds.$fShowCmd_$cshow1
+                  Cmds.$fShowValue_$cshowList -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowValue1 :: Cmds.Value -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cmds.Value) (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n (Cmds.$fShowCmd_$cshow1 x))
+                   s) -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowValue_$cshowList :: [Cmds.Value] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Cmds.Value]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Cmds.Value Cmds.$fShowValue1 ls s) -}
+869d518976c6b2e44d27a74760fb336b
+  $fShowValue_$cshowsPrec ::
+    GHC.Types.Int -> Cmds.Value -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Cmds.Value)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n (Cmds.$fShowCmd_$cshow1 x))
+                   s) -}
+5a619279d260498a948d8e07e044fb66
+  $tc'CAdd :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8551244487445437462##
+                   5171170878102274838##
+                   Cmds.$trModule
+                   Cmds.$tc'CAdd2
+                   0#
+                   Cmds.$tc'CAdd1) -}
+06751ac7ebb4a0e76cd3fccbe9091662
+  $tc'CAdd1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+f97e06e3a464aef5209c7bbfe4ea4db6
+  $tc'CAdd2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CAdd3) -}
+78d65ded5c6870592a173fc5d689816f
+  $tc'CAdd3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CAdd"#) -}
+56e2370214d9fcdacd7453ad5019d429
+  $tc'CComp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13153810870509543651##
+                   9510253770507590239##
+                   Cmds.$trModule
+                   Cmds.$tc'CComp1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+fbd6cd5c4d6068e812c2cf2a88079b71
+  $tc'CComp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CComp2) -}
+154ac09f4939be2a67c5cb726fc38b4e
+  $tc'CComp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CComp"#) -}
+0efc73ded9197ed6deb371d2a7598417
+  $tc'CDip :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12429355693805106443##
+                   5958115516769734852##
+                   Cmds.$trModule
+                   Cmds.$tc'CDip1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+89c4508f5572407a6fb716f32e931749
+  $tc'CDip1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CDip2) -}
+7100a9a4b0ef30bb1a01a75e5d0e3096
+  $tc'CDip2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CDip"#) -}
+8ddeb35b08462fde32fd9197478adfe5
+  $tc'CDiv :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5599671724613410955##
+                   10184762633438408225##
+                   Cmds.$trModule
+                   Cmds.$tc'CDiv1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+02952e986ad86be6e9e1d8b5730ef826
+  $tc'CDiv1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CDiv2) -}
+d12b6f59312926a36e90f2b6382af9e6
+  $tc'CDiv2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CDiv"#) -}
+308771863d1ece7fc7d76a1347474de5
+  $tc'CDo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15662994844099555596##
+                   16842594748749287857##
+                   Cmds.$trModule
+                   Cmds.$tc'CDo1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+178790f288c5f27b0a52c64d2328506f
+  $tc'CDo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CDo2) -}
+b8db124283e9db072ee27b44025a2cae
+  $tc'CDo2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CDo"#) -}
+d2803167aa5c24ace367e55c9c59d902
+  $tc'CDup :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12856969580151396450##
+                   2477146976429311739##
+                   Cmds.$trModule
+                   Cmds.$tc'CDup1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+46aeca1466db90b4a1f122704741a92b
+  $tc'CDup1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CDup2) -}
+81e1bb157b9ee3fd86afdd72fe236f3f
+  $tc'CDup2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CDup"#) -}
+1f8c7a70740973aa873890d7722d6462
+  $tc'CEq :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1357505935084441457##
+                   12256705947335000223##
+                   Cmds.$trModule
+                   Cmds.$tc'CEq1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+ad834de6badc7e28e95bc1e53a2f4a20
+  $tc'CEq1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CEq2) -}
+2f1fffbfda37d95babdeed3433604243
+  $tc'CEq2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CEq"#) -}
+1d39b79496c08190e677c49b0b0da536
+  $tc'CExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8401372041577728368##
+                   13415616913863300204##
+                   Cmds.$trModule
+                   Cmds.$tc'CExp1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+5bb3dfd0ae15049208e24020193aa757
+  $tc'CExp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CExp2) -}
+92b16425f2276d0bbf13a674fd597d66
+  $tc'CExp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CExp"#) -}
+59e36dc8c0f72d3e78d1fa033ba551b9
+  $tc'CHead :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10840682532206747866##
+                   18073855853027443410##
+                   Cmds.$trModule
+                   Cmds.$tc'CHead1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+1ee7ff3cb11768ddeae6d0a38d486deb
+  $tc'CHead1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CHead2) -}
+bca68d48cc1c224be83fd07ace8daf93
+  $tc'CHead2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CHead"#) -}
+b396cb7023c41e35fda6c06e76b26ee4
+  $tc'CImport :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14840580846348875285##
+                   7608932022280941114##
+                   Cmds.$trModule
+                   Cmds.$tc'CImport1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+07d7383af850bcc06f710f2ea8ce77d4
+  $tc'CImport1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CImport2) -}
+44ffae801a6e1e206903dd89d2b46a92
+  $tc'CImport2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CImport"#) -}
+8500b1073ceb6082e38dd85c845bbda9
+  $tc'CLet :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14932655829028706767##
+                   1636514031556237138##
+                   Cmds.$trModule
+                   Cmds.$tc'CLet1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+3af263f61691f244ce48685bf86f94fa
+  $tc'CLet1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CLet2) -}
+265737827fa12d2d42d248a19b853d22
+  $tc'CLet2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CLet"#) -}
+f5bebc1395c40dda8ad4daede09b88df
+  $tc'CMap :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15803883399039274530##
+                   7157381389753134002##
+                   Cmds.$trModule
+                   Cmds.$tc'CMap1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+ffc00588c1ba1acaba6bb8596d787add
+  $tc'CMap1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CMap2) -}
+0560b8b6ca44c4ce34b6db1e1a59a0bf
+  $tc'CMap2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMap"#) -}
+36ec904989d2c8c061cad1aaaf0727f3
+  $tc'CMatch :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18226394956580639971##
+                   15792272690126840829##
+                   Cmds.$trModule
+                   Cmds.$tc'CMatch1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+26755995fb121c03348f33e512b0c79f
+  $tc'CMatch1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CMatch2) -}
+82382c4cd66f04f4a03f39f827676c4d
+  $tc'CMatch2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMatch"#) -}
+e39b1a1878fc2bb6c03ae08ab915831c
+  $tc'CMul :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4370636869139288884##
+                   1179730239702314843##
+                   Cmds.$trModule
+                   Cmds.$tc'CMul1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+bcc026f620806f1ecb50f7ee783a0d81
+  $tc'CMul1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CMul2) -}
+bab110030e0fe3b0739b2f5b59d930cd
+  $tc'CMul2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMul"#) -}
+9ab7e8ec20178c305167506de94dbb9b
+  $tc'CPop :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4750587642214197371##
+                   3048825338424471250##
+                   Cmds.$trModule
+                   Cmds.$tc'CPop1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+8a2144e13519d0c3a715d62404493bec
+  $tc'CPop1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CPop2) -}
+26f61dedb5652bba91b92630fd2492dc
+  $tc'CPop2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CPop"#) -}
+20384835830092479e7ed08eb60328c3
+  $tc'CQuote :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14604344232018602617##
+                   13395198407545127392##
+                   Cmds.$trModule
+                   Cmds.$tc'CQuote1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+3bd6090197ddcf62c4bf58326542f68d
+  $tc'CQuote1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CQuote2) -}
+7eb209ad2d83f4926d33e9bc840682c6
+  $tc'CQuote2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CQuote"#) -}
+763bfaadd15653cbc7f7fef1c8cfbfe3
+  $tc'CSub :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5714139509163062364##
+                   12897443862366618592##
+                   Cmds.$trModule
+                   Cmds.$tc'CSub1
+                   0#
+                   Cmds.$tc'CAdd1) -}
+cfcfaa4a1abce1f14e2e3878a3c4dcd4
+  $tc'CSub1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'CSub2) -}
+ce5fe33755507576800720482469227c
+  $tc'CSub2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CSub"#) -}
+048d8ae6256b248848fd31592ff5e93a
+  $tc'Call :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14212783825854298963##
+                   8096966721855270144##
+                   Cmds.$trModule
+                   Cmds.$tc'Call2
+                   0#
+                   Cmds.$tc'Call1) -}
+074b3f0bb68684b46dbcf6ef4eb608ec
+  $tc'Call1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+9db9fedcf766de849cd5ec2fedf183ad
+  $tc'Call2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'Call3) -}
+4e6a446f1a44b76ffa6c5f93b1895b32
+  $tc'Call3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Call"#) -}
+36a7a87ca93a55fddc61f3850f4ec987
+  $tc'LitInt :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11541668699444626318##
+                   11759163263676357276##
+                   Cmds.$trModule
+                   Cmds.$tc'LitInt2
+                   0#
+                   Cmds.$tc'LitInt1) -}
+1085efc9d297029a54e3db75419309f2
+  $tc'LitInt1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+769ec62dc18c3ce896e966f731cb731a
+  $tc'LitInt2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'LitInt3) -}
+2bf8f27832c1453a7399f6bec48ca1a1
+  $tc'LitInt3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LitInt"#) -}
+33e0c0c2c824038a748f26e42123fd48
+  $tc'LitString :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7707919373189577781##
+                   11086254143207222657##
+                   Cmds.$trModule
+                   Cmds.$tc'LitString2
+                   0#
+                   Cmds.$tc'LitString1) -}
+f71a0acc8fe51f99d18aabe5f25d4445
+  $tc'LitString1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+dc797a9fc3a90a47e5f1c1f68973bb4b
+  $tc'LitString2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'LitString3) -}
+3c8306278daa268eabd2aa3ab3b179d3
+  $tc'LitString3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LitString"#) -}
+754531239aa3e788a2161e944603e5df
+  $tc'Push :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8666266486055427671##
+                   16013126722951977221##
+                   Cmds.$trModule
+                   Cmds.$tc'Push2
+                   0#
+                   Cmds.$tc'Push1) -}
+33b6f6a911d942c0e2b8a62202cd0f23
+  $tc'Push1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+f417d43048b0e83448c47b17f273b811
+  $tc'Push2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'Push3) -}
+c7401b30a86f9040670dfaebd5e3e0f3
+  $tc'Push3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Push"#) -}
+b99c47706f890c96a0a8e87e597ff84d
+  $tc'Quote :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10886440782744687289##
+                   3902791174337858465##
+                   Cmds.$trModule
+                   Cmds.$tc'Quote2
+                   0#
+                   Cmds.$tc'Quote1) -}
+22e854221c0473264ea26d9d04c99271
+  $tc'Quote1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+5ad6252c446a77196c8a7156142069db
+  $tc'Quote2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'Quote3) -}
+a026790f601ea82bedaae6314c304595
+  $tc'Quote3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Quote"#) -}
+5b518cfe9b5db51bfe21296a5b67871d
+  $tc'Rule :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13391845131216322674##
+                   8139627946838922574##
+                   Cmds.$trModule
+                   Cmds.$tc'Rule2
+                   0#
+                   Cmds.$tc'Rule1) -}
+634a868f444538ef2fc8e5a0d84b167d
+  $tc'Rule1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7c8974127b1d4ddbc4ec81599f2ab7e1
+  $tc'Rule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'Rule3) -}
+9d9f3c9ffb9fddba9617b429d2daa40f
+  $tc'Rule3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Rule"#) -}
+47b99159f8950e2718f304facda74a98
+  $tc'TInt :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10850417993668320872##
+                   17362275282639806686##
+                   Cmds.$trModule
+                   Cmds.$tc'TInt2
+                   0#
+                   Cmds.$tc'TInt1) -}
+7a9fda4a0d3dce4168460e7f55e9b5d6
+  $tc'TInt1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+1b206f7d6e26d57ea488a74865f68c77
+  $tc'TInt2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'TInt3) -}
+fcf2ba81ebf3a667c1f6970a382a038c
+  $tc'TInt3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TInt"#) -}
+c0898b2bfb0c956d0b9882cd52003b11
+  $tc'TString :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12013475944208883759##
+                   2704019506399085453##
+                   Cmds.$trModule
+                   Cmds.$tc'TString1
+                   0#
+                   Cmds.$tc'TInt1) -}
+894347fc808854681578f051e10bbbbf
+  $tc'TString1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'TString2) -}
+691bed003f5b3cf0da28946a339536f0
+  $tc'TString2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TString"#) -}
+a0c4d196ffc44a1112d6c565b39f0e97
+  $tc'VName :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6588342097661079768##
+                   6348842465047489629##
+                   Cmds.$trModule
+                   Cmds.$tc'VName1
+                   0#
+                   Cmds.$tc'LitString1) -}
+208c7ec88ad09df0b295e2af83266f1a
+  $tc'VName1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'VName2) -}
+857f0f0bd347c0ef190469e9554a3afa
+  $tc'VName2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'VName"#) -}
+8af5b30270f196cbff9a4de4dc90e726
+  $tc'VType :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16973165650759744495##
+                   4732315015261891944##
+                   Cmds.$trModule
+                   Cmds.$tc'VType1
+                   0#
+                   Cmds.$tc'TInt1) -}
+ec6c356fa03309f9b28fc5505c217ceb
+  $tc'VType1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tc'VType2) -}
+9aa959ee6946405641f4db5bc4ffea3d
+  $tc'VType2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'VType"#) -}
+1e9706f764d76df998404fc3149e79c7
+  $tcCmd :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5495451120932958443##
+                   790649571901743936##
+                   Cmds.$trModule
+                   Cmds.$tcCmd1
+                   0#
+                   GHC.Types.krep$*) -}
+ebcff39bb207760e0a5e6afe87c2c7cf
+  $tcCmd1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tcCmd2) -}
+b33a33f1052e081e3abcc885c6ea01d7
+  $tcCmd2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Cmd"#) -}
+000585a695e8f66f52eadc0080fee933
+  $tcValue :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11306332904929359102##
+                   8100772819434329492##
+                   Cmds.$trModule
+                   Cmds.$tcValue1
+                   0#
+                   GHC.Types.krep$*) -}
+11cf635ddbfe1fd9cc2800c5462025ed
+  $tcValue1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$tcValue2) -}
+3e72ece08e5aaa784c10be174f7b80f8
+  $tcValue2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Value"#) -}
+772076e4c4b42c5af59c59dcf4b41ca5
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Cmds.$trModule3 Cmds.$trModule1) -}
+fadfebdd22739bb338bd972e96a04531
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$trModule2) -}
+2d853c808d6db7ab6a19bebdc4bb4cc8
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Cmds"#) -}
+d0a34f9c22f69c9bc082ddd291be4d53
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cmds.$trModule4) -}
+a1f846fa28cbc5bc007b3804c359aa5b
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+869d518976c6b2e44d27a74760fb336b
+  data Cmd
+    = Push Cmds.Value
+    | CAdd
+    | CSub
+    | CMul
+    | CDiv
+    | CExp
+    | CDo
+    | CLet
+    | Call Cmds.Name
+    | Rule (Cmds.Stack Cmds.Value) (Cmds.Stack Cmds.Value)
+    | CDup
+    | CDip
+    | CPop
+    | CQuote
+    | CComp
+    | CImport
+    | CMatch
+    | CHead
+    | CEq
+    | CMap
+869d518976c6b2e44d27a74760fb336b
+  type Cmds = Cmds.Stack Cmds.Cmd
+9e70f03e35361c135a5311da6c9eeade
+  type Environment = Data.Map.Internal.Map Cmds.Name Cmds.Cmds
+4809e7881c31f42db71a1acadb91a4f0
+  type Error a = Data.Either.Either Text.Parsec.Error.ParseError a
+9f30092c77be44c93d958e9532e37c42
+  type Identifier = GHC.Types.Int
+ea2685fa2961c6e5d1bfc37fface976f
+  type Name = GHC.Base.String
+df4242073116b7da68eeefec7d6e4bf7
+  type Stack a = [a]
+869d518976c6b2e44d27a74760fb336b
+  data Value
+    = LitInt GHC.Types.Int
+    | LitString GHC.Base.String
+    | Quote (Cmds.Stack Cmds.Cmd)
+    | VName Cmds.Name
+    | VType
+    | TInt
+    | TString
+fa25f3b1e1d6c4f212207f11f758903c
+  type Values = Cmds.Stack Cmds.Value
+2ebd975437e8e684e325b7197b605fd4
+  empty_env :: Cmds.Environment
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Map.Internal.Tip @ Cmds.Name @ Cmds.Cmds) -}
+869d518976c6b2e44d27a74760fb336b
+  print_cmds :: Cmds.Cmds -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: [Cmds.Cmd]) ->
+                 case Cmds.print_cmds_go x of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char : ds1 xs -> xs }) -}
+869d518976c6b2e44d27a74760fb336b
+  print_cmds_go :: [Cmds.Cmd] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+400d46109864899f323becc6cce073bc
+  print_stack :: GHC.Show.Show a => Cmds.Stack a -> GHC.Base.String
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(A,C(U),A)><S,1*U>,
+     Unfolding: (\ @ a ($dShow :: GHC.Show.Show a) (eta :: [a]) ->
+                 letrec {
+                   go :: [a] -> [GHC.Types.Char] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [a]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ GHC.Types.Char
+                       : y ys
+                       -> GHC.Types.:
+                            @ GHC.Types.Char
+                            Cmds.print_stack1
+                            (GHC.Base.++
+                               @ GHC.Types.Char
+                               (GHC.Show.show @ a $dShow y)
+                               (go ys)) }
+                 } in
+                 case go eta of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char : ds1 xs -> xs }) -}
+5cc5af7f5a5e0dedb87c4c4bfb0e6d5b
+  print_stack1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ' '#) -}
+96519dbf705d6fdfbc30feb2941a69b6
+  to_string :: Cmds.Cmd -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Cmds.Cmd) ->
+                 case ds of wild {
+                   Cmds.Push v -> Cmds.$fShowCmd_$cshow1 v
+                   Cmds.CAdd -> Cmds.to_string37
+                   Cmds.CSub -> Cmds.to_string35
+                   Cmds.CMul -> Cmds.to_string33
+                   Cmds.CDiv -> Cmds.to_string31
+                   Cmds.CExp -> Cmds.to_string29
+                   Cmds.CDo -> Cmds.to_string27
+                   Cmds.CLet -> Cmds.to_string25
+                   Cmds.Call n -> n
+                   Cmds.Rule xs ys
+                   -> GHC.CString.unpackAppendCString#
+                        Cmds.to_string24
+                        (let {
+                           karg :: [GHC.Types.Char]
+                           = GHC.CString.unpackAppendCString#
+                               Cmds.to_string23
+                               (case Cmds.to_string_go1 ys of wild1 {
+                                  [] -> Cmds.to_string22
+                                  : ds1 xs1 -> GHC.Base.++ @ GHC.Types.Char xs1 Cmds.to_string20 })
+                         } in
+                         case Cmds.to_string_go xs of wild1 {
+                           []
+                           -> GHC.Base.++
+                                @ GHC.Types.Char
+                                (GHC.Types.[] @ GHC.Types.Char)
+                                karg
+                           : ds1 xs1 -> GHC.Base.++ @ GHC.Types.Char xs1 karg })
+                   Cmds.CDup -> Cmds.to_string18
+                   Cmds.CDip -> Cmds.to_string16
+                   Cmds.CPop -> Cmds.to_string14
+                   Cmds.CQuote -> Cmds.to_string12
+                   Cmds.CComp -> Cmds.to_string10
+                   Cmds.CImport -> Cmds.to_string8
+                   Cmds.CMatch -> Cmds.to_string6
+                   Cmds.CHead -> Cmds.to_string4
+                   Cmds.CEq -> Cmds.to_string2
+                   Cmds.CMap -> Cmds.to_string1 }) -}
+43e323dc26b2388a5cbfa48f9220d84e
+  to_string1 :: GHC.Base.String
+  {- Strictness: x -}
+8e7d84c323b0eabf45652aa315288e97
+  to_string10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string11) -}
+80ea67daa76cf32fffa1978505bc45d0
+  to_string11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("comp"#) -}
+96ed333d1e7b05e473207ddd968bc013
+  to_string12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string13) -}
+1b8833e8f0fa96d33df452de5fb2ebf9
+  to_string13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("quote"#) -}
+1b8fbe853f7ff8b0ae4f1d849cbb5cfb
+  to_string14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string15) -}
+6b4fae99f0773132f29fce605ba54a03
+  to_string15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("pop"#) -}
+081c023f120a6193bf01e657ef6348f1
+  to_string16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string17) -}
+018aba57c51e67ae645874e0ddda2187
+  to_string17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("dip"#) -}
+19d2aaa99f04887a2e117cf80677d164
+  to_string18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string19) -}
+246907df8eb77afc30cada0ef208acc3
+  to_string19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("dup"#) -}
+3be641cdc5724f1ad97240f27f072b50
+  to_string2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string3) -}
+dc10bbedda9c27be7b5a7bf9c6f1bcea
+  to_string20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string21) -}
+e4bde5172036f76e7dfa8bb5b01ac8e9
+  to_string21 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (")"#) -}
+f79f49ff12cb99af8cbdadede9785c25
+  to_string22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Cmds.to_string20) -}
+f47876b32adfeebbfc38dec3c829e9cf
+  to_string23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" -> "#) -}
+62474d42d804814c4eedb693b1eb1474
+  to_string24 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("("#) -}
+6f213aeed0000daa7c41abc88943116d
+  to_string25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string26) -}
+eec2f1b65cb00edd34db1ff3020cc2ae
+  to_string26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let"#) -}
+da997a46487f6fbc920856b74cf97eab
+  to_string27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string28) -}
+00a1587c905facffab1c9e5b074eb58a
+  to_string28 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("do"#) -}
+69f79c100c74a4778dd83ccf59191bed
+  to_string29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string30) -}
+d4e267e72577d1893ad9acb3012aafad
+  to_string3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("="#) -}
+08f084c16909bcb5cd58af55add2645b
+  to_string30 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("**"#) -}
+107e53706c76e48c7d643fc76da4103b
+  to_string31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string32) -}
+4abe2e8d325cbafe6a1bb2df2a597408
+  to_string32 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("/"#) -}
+b4ccaf148dc326b1d01f026bf8aebb3a
+  to_string33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string34) -}
+8009e1ec33848f4e11f09eb37b02b852
+  to_string34 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("*"#) -}
+691955742d9d421a4e0c10c705bf2ae2
+  to_string35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string36) -}
+dc88dc0d76696019ad8dc2a9169af1d9
+  to_string36 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("-"#) -}
+a29f70a65105847c4858d136f992a196
+  to_string37 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string38) -}
+c03499151ca063106a4b768e726fed36
+  to_string38 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("+"#) -}
+9a9225e0544f139fe075f579b54d70b0
+  to_string4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string5) -}
+025b343bda3da465d34dc8e79da94840
+  to_string5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("head"#) -}
+bffce52d59657399beb0bfdead8a7672
+  to_string6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string7) -}
+82dd45693ae6e37f3fae1b151c3186f2
+  to_string7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("match"#) -}
+b1945c03454ceb1c5ba0813e966c4cbd
+  to_string8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cmds.to_string9) -}
+a41c6a0a4492cfecd5e9c968803967b4
+  to_string9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("import"#) -}
+761266aefb90aff7a96b37139cec9fe6
+  to_string_go :: [Cmds.Value] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+2f4d047bba31f1a5553ef4c9e1c571c2
+  to_string_go1 :: [Cmds.Value] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+instance [safe] GHC.Classes.Eq [Cmds.Cmd] = Cmds.$fEqCmd
+instance [safe] GHC.Classes.Eq [Cmds.Value] = Cmds.$fEqValue
+instance [safe] GHC.Show.Show [Cmds.Cmd] = Cmds.$fShowCmd
+instance [safe] GHC.Show.Show [Cmds.Value] = Cmds.$fShowValue
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
